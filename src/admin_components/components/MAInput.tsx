@@ -8,7 +8,7 @@ type inpProps = {
     inptype : string
 }
 
-export default function BasicTextFields(props:inpProps) {
+export default function MATextFields(props:inpProps) {
     const {inpLabel , inptype , inpChange} = props
   return (
     <Box
@@ -19,7 +19,7 @@ export default function BasicTextFields(props:inpProps) {
       noValidate
       autoComplete="off"
     >
-      <TextField className='w-25' id="outlined-basic" label={inpLabel} onChange={inpChange} type={inptype} variant="standard" />
+      <TextField className='w-25' id="outlined-basic" color='error' focused label={inpLabel} onChange={inpChange} type={inptype} variant="standard" />
     </Box>
   );
 }

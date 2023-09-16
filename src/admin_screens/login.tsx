@@ -7,24 +7,24 @@ export default function LoginFunc(){
     }
     return(
         <Box>
-            <Box sx={{height:'100vh', backgroundColor:'GrayText'}} className = 'd-flex justify-content-center align-items-center '>
-                <Paper className="p-5">
+            <Box sx={{height:'100vh', backgroundColor:'lightgray'}} className = 'd-flex justify-content-center align-items-center '>
+                <div className="p-5 bg-light border border-primary shadow-lg rounded">
                     <Box>
-                    <Typography variant="h5">Login</Typography>
+                    <Typography className="text-center text-primary" variant="h5">Login</Typography>
                     </Box>
                     <Box className = 'mt-3'>
-                       <TextField variant="standard" label = 'Email' type="email" />
+                       <TextField variant="standard" color="primary" focused label = 'Email' type="email" />
                     </Box>
                     <Box className = 'mt-3'>
-                       <TextField variant="standard" label = 'Password' type="password" />
+                       <TextField variant="standard" color="primary" focused label = 'Password' type="password" />
                     </Box>
                     <Box className = 'mt-3 '>
                         <Button className="w-100" variant="contained">Login</Button>
                     </Box>
                     <Box className = 'mt-2'>
-                        <Typography>Don't have an account <span className="linking" onClick={() => signUpRout()}>Sign Up</span></Typography>
+                        <Typography className="text-primary" text-primary>Don't have an account <span className="linking" onClick={() => signUpRout()}>Sign Up</span></Typography>
                     </Box>
-                </Paper>
+                </div>
             </Box>
         </Box>
     )

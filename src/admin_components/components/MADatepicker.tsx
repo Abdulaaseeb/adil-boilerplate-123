@@ -7,7 +7,7 @@ type DateProps = {
     datetype : string
 }
 
-export default function BasicDatepicker(props:DateProps) {
+export default function MADatepicker(props:DateProps) {
     const { datetype , dateChange} = props
   return (
     <Box
@@ -18,7 +18,7 @@ export default function BasicDatepicker(props:DateProps) {
       noValidate
       autoComplete="off"
     >
-      <TextField className='w-25' id="outlined-basic"  onChange={dateChange} type={datetype} variant="standard" />
+      <TextField className='w-25 date-picker'  id="outlined-basic" color='error' focused onChange={dateChange} type={datetype} variant="outlined" />
     </Box>
   );
 }

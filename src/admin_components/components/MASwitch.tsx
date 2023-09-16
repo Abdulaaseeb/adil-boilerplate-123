@@ -9,11 +9,11 @@ type switchprops ={
     able : boolean
 }
 
-export default function BasicSwitches(props : switchprops) {
+export default function MASwitches(props : switchprops) {
     const {Check , able} = props
   return (
     
-      <Switch className='mt-5 mx-3'  defaultChecked = {Check} disabled = {able} {...label}/>
+      <Switch className='mt-5 mx-3' color='error'  defaultChecked = {Check} disabled = {able} {...label}/>
 
   );
 }

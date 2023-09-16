@@ -7,10 +7,10 @@ type btnprops = {
     btnclick : any
 }
 
-export default function BasicButtons(props:btnprops) {
+export default function MAButtons(props:btnprops) {
     const {btnclick , btnvalue} = props
   return (
-     <Button className='mt-5 mx-2 ' variant="outlined" onClick={btnclick}>{btnvalue}</Button>
+     <Button className='mt-5 mx-2' color='error' variant="outlined" onClick={btnclick}>{btnvalue}</Button>
   );
 }
 

@@ -5,10 +5,10 @@ type tableProps = {
     cols:any[]
 }
 
-function BasicTable(props : tableProps){
+function MATable(props : tableProps){
     const{dataSource,cols} = props
     return(
-        <table className="table table-striped table-primary  mt-5">
+        <table className="table table-warning table-striped  text-center text-danger mt-5" >
             <thead>
                 <tr>
                {cols.map((x,i) => {
@@ -36,4 +36,4 @@ function BasicTable(props : tableProps){
     )
 }
 
-export default BasicTable
+export default MATable

@@ -7,27 +7,27 @@ export default function SignUpFunc(){
     }
     return(
         <Box>
-            <Box sx={{height:'100vh', backgroundColor:'GrayText'}} className = 'd-flex justify-content-center align-items-center '>
-                <Paper className="p-5">
+            <Box sx={{height:'100vh', backgroundColor:'lightgray'}} className = 'd-flex justify-content-center align-items-center '>
+                <div className="p-5 border rounded shadow-lg border-primary bg-light">
                     <Box>
-                    <Typography variant="h5">Sign Up</Typography>
+                    <Typography variant="h5" className="text-center text-primary">Sign Up</Typography>
                     </Box>
                     <Box className = 'mt-3'>
-                       <TextField variant="standard" label = 'Full Name' type="name" />
+                       <TextField variant="standard" color="primary" focused label = 'Full Name' type="name" />
                     </Box>
                     <Box className = 'mt-3'>
-                       <TextField variant="standard" label = 'Email' type="email" />
+                       <TextField variant="standard" color="primary" focused label = 'Email' type="email" />
                     </Box>
                     <Box className = 'mt-3'>
-                       <TextField variant="standard" label = 'Password' type="password" />
+                       <TextField variant="standard" color="primary" focused label = 'Password' type="password" />
                     </Box>
                     <Box className = 'mt-3 '>
                         <Button className="w-100" variant="contained">Sign Up</Button>
                     </Box>
                     <Box className = 'mt-2'>
-                        <Typography>Already have an account <span className="linking" onClick={() => loginRout()}>Login</span></Typography>
+                        <Typography className="text-primary">Already have an account <span className="linking" onClick={() => loginRout()}>Login</span></Typography>
                     </Box>
-                </Paper>
+                </div>
             </Box>
         </Box>
     )

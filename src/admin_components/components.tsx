@@ -1,17 +1,17 @@
 import React from 'react';
-import BasicButtons from './components/TSButton';
-import BasicDatepicker from './components/TSDatepicker';
-import BasicSelect from './components/TSSelect';
-import BasicSwitches from './components/TSSwitch';
-import BasicTextFields from './components/TSInput';
-import IconsButtons from './components/TSIconbutton';
-import BasicTable from './components/TSTable';
+import MAButtons from './components/MAButton';
+import MADatepicker from './components/MADatepicker';
+import MASelect from './components/MASelect';
+import MASwitches from './components/MASwitch';
+import MATextFields from './components/MAInput';
+import MAIconsButtons from './components/MAIconbutton';
+import MATable from './components/MATable';
 import AbcSharpIcon from '@mui/icons-material/AbcSharp';
 import AccessAlarmSharpIcon from '@mui/icons-material/AccessAlarmSharp';
 import AccountBalanceSharpIcon from '@mui/icons-material/AccountBalanceSharp';
 import AdUnitsSharpIcon from '@mui/icons-material/AdUnitsSharp';
 import AddBoxSharpIcon from '@mui/icons-material/AddBoxSharp';
-import SMNavbar from './SMNavbar';
+import MANavbar from './components/MANavbar';
 
 function AppComponents() {
   let arrOfTable = [
@@ -65,37 +65,37 @@ function AppComponents() {
     },
   ]
   return (
-    <div className="App">
-  <SMNavbar/>
+    <div className="App" >
+  <MANavbar/>
 
-      <h1 className='mt-5 mb-2 text-primary'>COMPONENTS</h1>
-        <BasicButtons btnvalue='Adil' btnclick={() => alert("Adil")}/>
-        <BasicButtons btnvalue='Haseeb' btnclick={() => alert("Haseeb")}/>
-        <BasicButtons btnvalue='Raheem' btnclick={() => alert('Raheem')}/>
-        <BasicButtons btnvalue='Shakoor' btnclick={() => alert('Shakoor')}/>
-        <BasicButtons btnvalue='Mannan' btnclick={() => alert('Mannan')}/>
+      <h1 className='mt-5 mb-2 text-danger'>COMPONENTS</h1>
+        <MAButtons btnvalue='Adil' btnclick={() => alert("Adil")}/>
+        <MAButtons btnvalue='Haseeb' btnclick={() => alert("Haseeb")}/>
+        <MAButtons btnvalue='Raheem' btnclick={() => alert('Raheem')}/>
+        <MAButtons btnvalue='Shakoor' btnclick={() => alert('Shakoor')}/>
+        <MAButtons btnvalue='Mannan' btnclick={() => alert('Mannan')}/>
         <div>
-        <IconsButtons iconposition={<AbcSharpIcon/>} iconvalue='ABC' iconclick={() => alert("ABC ICON")}/>
-        <IconsButtons iconposition={<AccessAlarmSharpIcon/>} iconvalue='Alaram' iconclick={() => alert("ALARAM ICON")}/>
-        <IconsButtons iconposition={<AccountBalanceSharpIcon/>} iconvalue='Account' iconclick={() => alert("ACCOUNT ICON")}/>
-        <IconsButtons iconposition={<AdUnitsSharpIcon/>} iconvalue='Units' iconclick={() => alert("UNITS ICON")}/>
-        <IconsButtons iconposition={<AddBoxSharpIcon/>} iconvalue='AddBox' iconclick={() => alert("ADDBOX ICON")}/>
+        <MAIconsButtons iconposition={<AbcSharpIcon/>} iconvalue='ABC' iconclick={() => alert("ABC ICON")}/>
+        <MAIconsButtons iconposition={<AccessAlarmSharpIcon/>} iconvalue='Alaram' iconclick={() => alert("ALARAM ICON")}/>
+        <MAIconsButtons iconposition={<AccountBalanceSharpIcon/>} iconvalue='Account' iconclick={() => alert("ACCOUNT ICON")}/>
+        <MAIconsButtons iconposition={<AdUnitsSharpIcon/>} iconvalue='Units' iconclick={() => alert("UNITS ICON")}/>
+        <MAIconsButtons iconposition={<AddBoxSharpIcon/>} iconvalue='AddBox' iconclick={() => alert("ADDBOX ICON")}/>
         </div>
         <div>
-         <BasicSwitches Check = {false} able = {false}/>
-         <BasicSwitches Check  able = {false}/>
-         <BasicSwitches Check = {false} able />
-         <BasicSwitches Check able />
+         <MASwitches Check = {false} able = {false}/>
+         <MASwitches Check  able = {false}/>
+         <MASwitches Check = {false} able />
+         <MASwitches Check able />
         </div>
         <div className='mt-5'>
-          <BasicTextFields inpChange={() => alert("It's type is text ")} inptype='text' inpLabel='TEXT'/>
-          <BasicTextFields inpChange={() => alert("It's type is number '123'")} inptype='number' inpLabel='NUMBER'/>
-          <BasicTextFields inpChange={() => alert("It's type is password ")} inptype='password' inpLabel='PASSWORD'/>
-          <BasicTextFields inpChange={() => alert("It's type is email ")} inptype='email' inpLabel='EMAIL'/>
-          <BasicTextFields inpChange={() => alert("It's type is name ")} inptype='name' inpLabel='NAME'/>
-          <BasicDatepicker dateChange={() => alert("It's type is date")} datetype='date'/>
+          <MATextFields inpChange={() => alert("It's type is text ")} inptype='text' inpLabel='TEXT'/>
+          <MATextFields inpChange={() => alert("It's type is number '123'")} inptype='number' inpLabel='NUMBER'/>
+          <MATextFields inpChange={() => alert("It's type is password ")} inptype='password' inpLabel='PASSWORD'/>
+          <MATextFields inpChange={() => alert("It's type is email ")} inptype='email' inpLabel='EMAIL'/>
+          <MATextFields inpChange={() => alert("It's type is name ")} inptype='name' inpLabel='NAME'/>
+          <MADatepicker dateChange={() => alert("It's type is date")} datetype='date'/>
         </div>
-        <BasicSelect options={[
+        <MASelect options={[
 
 {
   value: "Samsung",
@@ -120,7 +120,7 @@ function AppComponents() {
 ]}
 getValue={(e: any) => { alert(e) }} />
 
-        <BasicTable dataSource={arrOfTable} cols={[
+        <MATable dataSource={arrOfTable} cols={[
         {
           heading: "NAME",
           key: "name"
